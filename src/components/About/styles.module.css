@@ -1,0 +1,56 @@
+.about_container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  width: 100%;
+  /* grid-row: span 2; */
+  border: 1px solid #48515e;
+}
+
+.about_col_1 {
+  grid-column: span 4;
+  padding: 20px;
+}
+
+.about_col_2 {
+  grid-column: span 4;
+  padding: 14px;
+  border: 1px solid #48515e;
+}
+
+.about_col_3 {
+  grid-column-start: 8;
+  grid-column-end: 12;
+}
+
+.about_text {
+  margin-bottom: 80px;
+  text-align: left;
+}
+
+.about_subtext {
+  font-size: 18px;
+  color: #77818f;
+}
+
+.underline_text {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #17e134;
+}
+
+.find_me_at {
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.mahak_img_container {
+  background-image: url("src/assets/mahak-img.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+    justify-content: flex-start;
+}

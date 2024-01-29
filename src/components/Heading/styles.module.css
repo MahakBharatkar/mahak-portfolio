@@ -1,0 +1,7 @@
+.heading_row{
+    grid-column: span 12;
+    grid-row: span 1;
+    font-size: 48px;
+    font-weight: 700;
+    border: 1px solid #48515e;
+}
