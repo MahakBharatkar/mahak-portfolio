@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   width: 100%;
-  /* grid-row: span 2; */
   border: 1px solid #48515e;
 }
 
@@ -18,8 +17,8 @@
 }
 
 .about_col_3 {
-  grid-column-start: 8;
-  grid-column-end: 12;
+    grid-column: span 4;
+  padding: 14px;
 }
 
 .about_text {
@@ -53,4 +52,18 @@
   display: flex;
   align-items: flex-end;
     justify-content: flex-start;
+}
+
+.mahak_img_container konvajs-content{
+    width: 200px;
+}
+
+.mahak_img_container canvas{
+    width: 200px; 
+}
+
+.experiments_container{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+
 }

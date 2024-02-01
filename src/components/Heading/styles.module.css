@@ -1,6 +1,9 @@
 .heading_row{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 2fr));
     grid-column: span 12;
-    grid-row: span 1;
+    grid-row: span 4;
     font-size: 48px;
     font-weight: 700;
     border: 1px solid #48515e;

@@ -1,6 +1,36 @@
+import { useRef, useState } from "react";
 import styles from "./styles.module.css";
+import { Layer, Line, Stage } from "react-konva";
 
 const About = () => {
+  const [lines, setLines] = useState([]);
+  const isDrawing = useRef(false);
+  const handleMouseDown = (e) => {
+    isDrawing.current = true;
+    const pos = e.target.getStage().getPointerPosition();
+    setLines([...lines, { points: [pos.x, pos.y] }]);
+  };
+
+  const handleMouseMove = (e) => {
+    // no drawing - skipping
+    if (!isDrawing.current) {
+      return;
+    }
+    const stage = e.target.getStage();
+    const point = stage.getPointerPosition();
+    let lastLine = lines[lines.length - 1];
+    // add point
+    lastLine.points = lastLine.points.concat([point.x, point.y]);
+
+    // replace last
+    lines.splice(lines.length - 1, 1, lastLine);
+    setLines(lines.concat());
+  };
+
+  const handleMouseUp = () => {
+    isDrawing.current = false;
+  };
+
   return (
     <div className={styles.about_container}>
       <div className={styles.about_col_1}>
@@ -11,8 +41,12 @@ const About = () => {
             development challenges & UI designer.
           </div>
           <div className={styles.about_subtext}>
-            I am also a <span className={styles.underline_text}>professional calligrapher</span>, love typography
-            & <span className={styles.underline_text}>fermenting stuff</span>.
+            I am also a{" "}
+            <span className={styles.underline_text}>
+              professional calligrapher
+            </span>
+            , love typography &{" "}
+            <span className={styles.underline_text}>fermenting stuff</span>.
           </div>
         </div>
 
@@ -23,10 +57,38 @@ const About = () => {
       </div>
       <div className={styles.about_col_2}>
         <div className={styles.mahak_img_container}>
-            <span>mahak-img</span>
+          <Stage
+            width={376}
+            height={window.innerHeight}
+            onMouseDown={handleMouseDown}
+            onMousemove={handleMouseMove}
+            onMouseup={handleMouseUp}
+          >
+            <Layer>
+              {lines.map((line, i) => (
+                <Line
+                  key={i}
+                  points={line.points}
+                  stroke="#ef5d70"
+                  strokeWidth={5}
+                  tension={0.5}
+                  lineCap="round"
+                  lineJoin="round"
+                  globalCompositeOperation={'source-over'}
+                />
+              ))}
+            </Layer>
+          </Stage>
+
+          {/* <span>mahak-img</span> */}
         </div>
       </div>
-      <div className={styles.about_col_3}></div>
+      <div className={styles.about_col_3}>
+        <div>PERSONAL PROJECCTS</div>
+        <div className={styles.experiments_container}>
+
+        </div>
+      </div>
     </div>
   );
 };
