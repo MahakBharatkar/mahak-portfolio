@@ -103,7 +103,7 @@ const About = () => {
         </div>
       </div>
       <div className={styles.about_col_3}>
-        <h2>Personal projects</h2>
+        <h4>PERSONAL PROJECTS</h4>
         <div className={styles.experiments_container}>
             {projects.map((project)=>{
                 return (

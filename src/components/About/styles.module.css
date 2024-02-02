@@ -1,6 +1,7 @@
 .about_container {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  height: fit-content;
   width: 100%;
   border: 1px solid #48515e;
 }
@@ -14,12 +15,26 @@
   grid-column: span 4;
   padding: 14px;
   border: 1px solid #48515e;
+  border-style: none solid;
   position: relative;
 }
 
 .about_col_3 {
   grid-column: span 4;
   padding: 14px;
+  --dot-bg: #242424;
+  --dot-color: #48515e;
+  --dot-size: 2px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+    text-align: left;
+}
+
+h4{
+    color: #17e134;
 }
 
 .about_text {
@@ -56,13 +71,10 @@
 
 .mahak_img_container {
   background-image: url("src/assets/mahak-img.png");
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 10px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  height: 486px;
   cursor: url("src/assets/paintbrush.png");
 }
 
