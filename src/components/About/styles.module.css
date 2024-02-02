@@ -14,10 +14,11 @@
   grid-column: span 4;
   padding: 14px;
   border: 1px solid #48515e;
+  position: relative;
 }
 
 .about_col_3 {
-    grid-column: span 4;
+  grid-column: span 4;
   padding: 14px;
 }
 
@@ -29,6 +30,16 @@
 .about_subtext {
   font-size: 18px;
   color: #77818f;
+}
+
+.moustache_text {
+  color: #17e134;
+  font-size: 20px;
+  z-index: 100;
+  position: absolute;
+  top: 30%;
+  left: 75%;
+  transform: translate(-50%, -50%);
 }
 
 .underline_text {
@@ -51,19 +62,21 @@
   border-radius: 10px;
   display: flex;
   align-items: flex-end;
-    justify-content: flex-start;
+  justify-content: flex-start;
+  cursor: url("src/assets/paintbrush.png");
 }
 
-.mahak_img_container konvajs-content{
-    width: 200px;
+.mahak_img_container konvajs-content {
+  width: 200px;
 }
 
-.mahak_img_container canvas{
-    width: 200px; 
+.mahak_img_container canvas {
+  width: 200px;
 }
 
-.experiments_container{
-    display: grid;
-    grid-template-columns: repeat(6,minmax(0,1fr));
-
+.experiments_container {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  row-gap: 10px;
 }

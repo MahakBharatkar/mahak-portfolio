@@ -1,0 +1,15 @@
+.project_card{
+    border: 1px solid #48515e;
+    border-radius: 1rem;
+    overflow: hidden;
+    grid-column: span 6;
+    text-align: left;
+    padding: 4px 20px 20px 20px;
+    cursor: pointer;
+}
+
+.description_text{
+    line-height: 1.3;
+    font-size: 1.125rem;
+    color: #77818f;
+}

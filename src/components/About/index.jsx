@@ -1,6 +1,24 @@
 import { useRef, useState } from "react";
 import styles from "./styles.module.css";
 import { Layer, Line, Stage } from "react-konva";
+import ProjectCard from "./components/ProjectCard";
+
+const projects=[{
+    title: 'CryptoApp',
+    url: 'https://github.com/MahakBharatkar/crypto-app',
+    description: 'Cryptocurrency tracking webapp'
+},
+{
+    title: 'Task Manager',
+    url: 'https://github.com/MahakBharatkar/tick-it',
+    description: 'Task manager app'
+},
+{
+    title: 'Habit Tracker App',
+    url: 'https://github.com/MahakBharatkar/habit-tracker-v1',
+    description: 'Habit Tracker App'
+},
+]
 
 const About = () => {
   const [lines, setLines] = useState([]);
@@ -56,6 +74,7 @@ const About = () => {
         </div>
       </div>
       <div className={styles.about_col_2}>
+      <span className={styles.moustache_text}>Draw a moustache on me!!</span>
         <div className={styles.mahak_img_container}>
           <Stage
             width={376}
@@ -80,13 +99,17 @@ const About = () => {
             </Layer>
           </Stage>
 
-          {/* <span>mahak-img</span> */}
+          
         </div>
       </div>
       <div className={styles.about_col_3}>
-        <div>PERSONAL PROJECCTS</div>
+        <h2>Personal projects</h2>
         <div className={styles.experiments_container}>
-
+            {projects.map((project)=>{
+                return (
+                    <ProjectCard project={project}/>
+                )
+            })}
         </div>
       </div>
     </div>
