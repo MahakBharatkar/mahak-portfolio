@@ -26,15 +26,23 @@
   --dot-color: #48515e;
   --dot-size: 2px;
   --dot-space: 22px;
-	background:
-		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
-    text-align: left;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+  text-align: left;
 }
 
-h4{
-    color: #17e134;
+h4 {
+  color: #17e134;
 }
 
 .about_text {
@@ -64,6 +72,8 @@ h4{
 }
 
 .find_me_at {
+  display: flex;
+  justify-content: flex-end;
   font-weight: 800;
   font-size: 14px;
   margin-bottom: 10px;
