@@ -6,7 +6,18 @@
     grid-row: span 4;
     font-size: 80px;
     font-weight: 700;
-    border: 1px solid #48515e;
+    border: 1px solid #2a323e;
+    border-bottom: none;
+}
+
+h3{
+    grid-column: span 4;
+}
+
+iframe{
+    grid-column-start: 11;
+    grid-column-end: 13;
+    background: none;
 }
 
 .heading_row h3{

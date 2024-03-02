@@ -1,12 +1,12 @@
 .project_card{
-    border: 1px solid #48515e;
+    border: 1px solid #2a323e;
     border-radius: 1rem;
     overflow: hidden;
     grid-column: span 6;
     text-align: left;
     padding: 4px 20px 20px 20px;
     cursor: pointer;
-    background-color: #242424;
+    background-color: #080506;
 }
 
 .description_text{

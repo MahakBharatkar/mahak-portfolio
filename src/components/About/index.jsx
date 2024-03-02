@@ -3,22 +3,23 @@ import styles from "./styles.module.css";
 import { Layer, Line, Stage } from "react-konva";
 import ProjectCard from "./components/ProjectCard";
 
-const projects=[{
-    title: 'CryptoApp',
-    url: 'https://github.com/MahakBharatkar/crypto-app',
-    description: 'Cryptocurrency tracking webapp'
-},
-{
-    title: 'Task Manager',
-    url: 'https://github.com/MahakBharatkar/tick-it',
-    description: 'Task manager app'
-},
-{
-    title: 'Habit Tracker App',
-    url: 'https://github.com/MahakBharatkar/habit-tracker-v1',
-    description: 'Habit Tracker App'
-},
-]
+const projects = [
+  {
+    title: "CryptoApp",
+    url: "https://github.com/MahakBharatkar/crypto-app",
+    description: "Cryptocurrency tracking webapp",
+  },
+  {
+    title: "Task Manager",
+    url: "https://github.com/MahakBharatkar/tick-it",
+    description: "Task manager app",
+  },
+  {
+    title: "Habit Tracker App",
+    url: "https://github.com/MahakBharatkar/habit-tracker-v1",
+    description: "Habit Tracker App",
+  },
+];
 
 const About = () => {
   const [lines, setLines] = useState([]);
@@ -70,15 +71,14 @@ const About = () => {
 
         <div>
           <div className={styles.find_me_at}>FIND ME AT</div>
-          <div>link</div>
         </div>
       </div>
       <div className={styles.about_col_2}>
-      <span className={styles.moustache_text}>Draw a moustache on me!!</span>
+        <span className={styles.moustache_text}>Draw a moustache on me!!</span>
         <div className={styles.mahak_img_container}>
           <Stage
             width={376}
-            height={window.innerHeight}
+            height={486}
             onMouseDown={handleMouseDown}
             onMousemove={handleMouseMove}
             onMouseup={handleMouseUp}
@@ -93,23 +93,20 @@ const About = () => {
                   tension={0.5}
                   lineCap="round"
                   lineJoin="round"
-                  globalCompositeOperation={'source-over'}
+                  globalCompositeOperation={"source-over"}
                 />
               ))}
             </Layer>
           </Stage>
-
-          
         </div>
       </div>
+
       <div className={styles.about_col_3}>
         <h4>PERSONAL PROJECTS</h4>
         <div className={styles.experiments_container}>
-            {projects.map((project)=>{
-                return (
-                    <ProjectCard project={project}/>
-                )
-            })}
+          {projects.map((project) => {
+            return <ProjectCard project={project} />;
+          })}
         </div>
       </div>
     </div>

@@ -1,0 +1,24 @@
+.footer_container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: minmax(100px, 1fr);
+  grid-column: span 12;
+  grid-row: span 12;
+  font-size: 80px;
+  border: 1px solid #2a323e;
+  border-top: none;
+  align-items: center;
+}
+
+.underline_text {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #17e134;
+}
+
+.footer_text {
+  font-size: 18px;
+  color: #77818f;
+  grid-column: span 12;
+  grid-row: span 2;
+}
