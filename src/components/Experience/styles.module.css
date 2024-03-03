@@ -1,0 +1,41 @@
+.experience_container{
+    border: 1px solid #2a323e;
+    border-top: none;
+    padding: 16px;
+    text-align: left;
+
+}
+
+.experience_flex{
+    display: flex;
+}
+
+.h4{
+    color: #17e134;
+}
+
+.custom_tabs{
+    display: flex;
+    cursor: pointer;
+}
+
+.custom_tab{
+    padding: 0px 20px 2px;
+    border-left: 2px solid #2a323e;
+    
+}
+
+.custom_tab_selected{
+    border-left: 2px solid #17e134;
+    background-color: #2a323e;
+    padding: 0px 20px 2px;
+}
+
+.custom_tab_list{
+    width: 150px;
+    padding: 0px;
+}
+
+.custom_tab_panels{
+    grid-column: span 12;
+}

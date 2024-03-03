@@ -1,0 +1,27 @@
+.job_heading{
+    font-size: 22px;
+    font-weight: 500;
+    width: fit-content;
+}
+.green_text{
+    color: #17e134;
+}
+
+.description_container{
+    margin-left: 10px;
+}
+
+.job_duration{
+    color: #77818f;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+ul{
+    text-align: left;
+    display: inline-block;
+}
+
+li{
+  margin-bottom: 8px;  
+}
