@@ -29,11 +29,13 @@
     border-left: 2px solid #17e134;
     background-color: #2a323e;
     padding: 0px 20px 2px;
+    outline-style: none;
 }
 
 .custom_tab_list{
-    width: 150px;
+    min-width: 180px;
     padding: 0px;
+    list-style-type: none;
 }
 
 .custom_tab_panels{

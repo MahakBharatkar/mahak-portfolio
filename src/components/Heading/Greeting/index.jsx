@@ -9,9 +9,9 @@ const Greeting = () => {
       const hour = new Date().getHours();
       const greeting =
         hour >= 5 && hour < 12
-          ? 'Good Morning'
+          ? 'Good Morning!'
           : hour >= 12 && hour < 17
-          ? 'Good Afternoon'
+          ? 'Good Afternoon' : hour >= 17 && hour< 19 ? 'Good Evening!'
           : 'Hello Night owl';
       setSalutation(greeting);
     };

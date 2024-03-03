@@ -1,6 +1,7 @@
 .salutations_box{
     background-color: #17e134;
-    margin-top: 20px ;
+    position: relative;
+    top: 35% ;
     color: #080506;
     grid-column-start: 5;
     grid-column-end: 7;

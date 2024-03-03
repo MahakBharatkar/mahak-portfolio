@@ -8,20 +8,21 @@
 }
 
 .description_container{
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .job_duration{
     color: #77818f;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-ul{
+.description_container>ul{
     text-align: left;
     display: inline-block;
+    padding-inline-start: 10px;
 }
 
-li{
+.description_container>li{
   margin-bottom: 8px;  
 }
