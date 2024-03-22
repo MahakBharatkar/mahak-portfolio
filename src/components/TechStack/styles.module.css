@@ -1,0 +1,20 @@
+.techstack_container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr);
+    grid-column: span 12;
+    grid-row: span 12;
+    border: 1px solid #2a323e;
+    border-top: none;
+    align-items: left;
+    text-align: left;
+  }
+
+.technologies_container{
+    grid-column: span 4;
+}
+
+.technologies_container h4{
+    font-size: 18px;
+    color: #ffffff;
+}

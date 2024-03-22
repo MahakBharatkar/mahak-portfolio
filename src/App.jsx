@@ -6,6 +6,7 @@ import Heading from './components/Heading'
 import About from './components/About'
 import Footer from './components/Footer'
 import Experience from './components/Experience'
+import TechStack from './components/Techstack'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
     <div className='main_container'>
       <Heading/>
       <About/>
+      <TechStack/>
       <Experience/>
       <Footer/>
     </div>
