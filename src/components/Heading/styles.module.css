@@ -33,6 +33,7 @@ iframe {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 700;
+  margin-left: 4px;
 
   @media (min-width: 768px) {
     margin-left: 20px;
@@ -43,11 +44,12 @@ iframe {
   grid-column: span 3;
   display: flex;
   flex-direction: column;
-  margin: 20px 20px 0px 0px;
+  margin: 20px 8px 0px 8px;
 
   @media (min-width: 768px) {
     grid-column-start: 10;
     grid-column-end: 13;
+    margin: 20px 20px 0px 0px;
   }
 }
 
