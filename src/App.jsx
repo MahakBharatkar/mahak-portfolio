@@ -6,7 +6,7 @@ import Heading from './components/Heading'
 import About from './components/About'
 import Footer from './components/Footer'
 import Experience from './components/Experience'
-import TechStack from './components/Techstack'
+import TechStack from './components/TechStack'
 
 function App() {
 
