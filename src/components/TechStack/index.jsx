@@ -1,5 +1,6 @@
 import styles from "./styles.module.css";
 const technologies = ["React.js", "Next.js", "Javascript", "MySQL"];
+
 const TechStack = () => {
   return (
     <div className={styles.techstack_container}>

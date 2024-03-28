@@ -9,7 +9,6 @@ import Experience from './components/Experience'
 import TechStack from './components/Techstack'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className='main_container'>
