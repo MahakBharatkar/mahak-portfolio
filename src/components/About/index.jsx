@@ -2,6 +2,9 @@ import { useRef, useState } from "react";
 import styles from "./styles.module.css";
 import { Layer, Line, Stage } from "react-konva";
 import ProjectCard from "./components/ProjectCard";
+import githubLogo from '/logos/github_logo2.svg';
+import instagramLogo from '/logos/instagram_logo2.svg';
+import linkedinLogo from '/logos/linkedin_logo2.svg';
 
 const projects = [
   {
@@ -20,6 +23,9 @@ const projects = [
     description: "Habit Tracker App",
   },
 ];
+
+const LOGO_MAPPING =[githubLogo, linkedinLogo, instagramLogo];
+
 
 const About = () => {
   const [lines, setLines] = useState([]);
@@ -70,7 +76,18 @@ const About = () => {
         </div>
 
         <div>
-          <div className={styles.find_me_at}>FIND ME AT</div>
+          <div className={styles.find_me_at}>FIND ME AT
+          <div className={styles.social_logos_container}>
+            {LOGO_MAPPING.map((item)=>{
+              return (
+                <img src={item} alt="logo" width={40} height={40} style={{margin: '10px'}} key={item}></img>
+              )
+            })}
+          
+         
+          </div>
+          
+          </div>
         </div>
       </div>
       <div className={styles.about_col_2}>

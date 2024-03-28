@@ -1,12 +1,13 @@
 .salutations_box{
     background-color: #17e134;
     position: relative;
-    top: 5%;
+    top: 10%;
     color: #080506;
     font-size: 8px;
     font-weight: 600;
     border-radius: 10px;
     height: 20px;
+    padding: 0px 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,5 +19,6 @@
         height: 48px;
         grid-column-start: 5;
         grid-column-end: 7;
+        padding: none;
     }
 }
