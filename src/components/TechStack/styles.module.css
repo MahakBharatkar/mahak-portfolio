@@ -1,6 +1,7 @@
 .techstack_container {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 10px;
     grid-template-rows: minmax(0, 1fr);
     grid-column: span 12;
     grid-row: span 12;
@@ -8,6 +9,10 @@
     border-top: none;
     align-items: left;
     text-align: left;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+      }
   }
 
 .technologies_container{
